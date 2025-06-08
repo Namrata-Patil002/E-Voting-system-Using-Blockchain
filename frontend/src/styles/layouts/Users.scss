@@ -1,0 +1,29 @@
+.users-wrapper {
+  @include boxes-wrapper;
+  padding: 2px 0;
+
+  .user-wrapper {
+    @include box-wrapper;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    align-items: center;
+    width: 350px;
+  }
+}
+.empty-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.verify-icon {
+  color: $theme-primary;
+  font-size: 3rem;
+}
+.verify-icon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}

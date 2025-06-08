@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+$theme-gray: #e4e2e2;
+$theme-black: #379bc9;
+$theme-primary:#0f0f0f;
+$theme-secondary: rgba(54, 170, 131, 0.979); 
+
+@mixin box-shadow {
+  box-shadow: 2px 2px 10px rgba(189, 181, 181, 0.1);
+}
+
+body,
+html {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  // font-family: "Inter", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $theme-black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button-black {
+  background-color: $theme-black;
+  color: rgb(252, 251, 251);
+}
+.button-primary {
+  background-color: $theme-primary;
+  color: rgb(247, 246, 246);
+}
+
+.button-secondary {
+  background-color: $theme-black;
+  color: rgb(253, 253, 253);
+}
+
+button,
+.title-large,
+.title-small {
+  text-transform: uppercase;
+}
+
+.title-large {
+  font-size: 2.8rem;
+  font-weight: 900;
+}
+
+.title-small {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.text-normal {
+  font-weight: 500;
+}
+
+.success-message,
+.error-message {
+  box-sizing: border-box;
+  width: 400px;
+  padding: 20px 30px 20px 30px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  color: white;
+
+  span {
+    margin-right: 10px;
+  }
+}
+
+.success-message {
+  background-color: $theme-primary;
+}
+
+.error-message {
+  background-color: red;
+}
+
+.loading-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.spinner {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.footer {
+  margin-top: auto;
+}
+.results-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5rem;
+  min-height: 80vh;
+  position: relative;
+  font-size: 25px;
+  padding: 5rem 5rem 0 5rem;
+}
+
+.results-title {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+@import "./layouts/Boxes.scss";
+
+@import "./form.scss";
+@import "./vote-status.scss";
+@import "./pages/View.scss";
+@import "./pages/Landing.scss";
+@import "./pages/Admin/Create.scss";
+@import "./pages/User/Profile.scss";
+@import "./layouts/Login.scss";
+@import "./layouts/Default.scss";
+@import "./layouts/Users.scss";
+@import "./layouts/Polls.scss";
+@import "./components/Back.scss";
+@import "./components/Waiting.scss";
+@import "./components/Polls/Chart.scss";
+@import "./components/Polls/Panel.scss";

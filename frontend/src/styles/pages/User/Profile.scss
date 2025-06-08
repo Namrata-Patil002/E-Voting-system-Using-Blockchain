@@ -1,0 +1,40 @@
+.profile-wrapper {
+  @include box-shadow;
+  padding: 50px;
+  display: grid;
+  border-radius: 10px;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 100px;
+
+  .left-panel {
+    text-align: center;
+
+    .person-icon {
+      * {
+        font-size: 4rem;
+        color: $theme-primary;
+      }
+    }
+
+    .username {
+      padding: 20px 0 20px 0;
+    }
+  }
+
+  .right-panel {
+    .user-details{
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      font-size: larger;
+    }
+    .user-details-item{
+      padding: 1rem 0 0 0;
+    }
+    .user-details-property{
+      font-weight: 600;
+    }
+  }
+}
